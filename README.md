@@ -1,2 +1,3 @@
 # rhf-mui-dynamic-form
-Created with CodeSandbox
+
+[react-hook-form](https://react-hook-form.com/) wrapper for creating Dynamic Forms with [Material-UI](https://material-ui.com/) on the fly.

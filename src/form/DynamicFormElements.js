@@ -19,7 +19,13 @@ const DynamicFormElements = ({ fields }) => {
         </Grid>
       ))}
       <Grid item>
-        <Button type="submit" variant="contained" disabled={isSubmitDisabled}>
+        <Button
+          fullWidth
+          type="submit"
+          variant="contained"
+          color="secondary"
+          disabled={isSubmitDisabled}
+        >
           Submit
         </Button>
       </Grid>

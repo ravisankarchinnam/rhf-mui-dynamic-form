@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { Container } from "@material-ui/core";
 import Header from "./Header";
+import useFormHook from "./form/useFormHook";
+import { DynamicForm } from "./form/DynamicForm";
 import FormResult from "./form/FormResult";
 import "./styles.css";
-import { DynamicForm } from "./form/DynamicForm";
-import useFormHook from "./form/useFormHook";
 
 let renderCount = 0;
 
@@ -26,13 +27,14 @@ function App() {
     <>
       <Header renderCount={renderCount} />
       <hr />
-      <DynamicForm
-        fields={[{ name: "textfield", label: "Field" }]}
-        methods={methods}
-        onSubmit={(data) => setData(data)}
-      />
-
-      <FormResult {...data} />
+      <Container maxWidth="sm">
+        <DynamicForm
+          fields={[{ name: "textfield", label: "Field" }]}
+          methods={methods}
+          onSubmit={(data) => setData(data)}
+        />
+        <FormResult {...data} />
+      </Container>
     </>
   );
 }
